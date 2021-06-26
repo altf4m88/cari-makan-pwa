@@ -23,8 +23,15 @@ const Detail = {
     const restaurant = await RestaurantSource.detail(url.id);
     const detailContainer = document.querySelector('#restaurant');
 
-    if(restaurant === 'NO_INTERNET'){
-      
+    if (restaurant === 'NO_INTERNET') {
+      detailContainer.innerHTML += `
+      <div class="container">
+        <div class="no-internet">
+          <img src="icons/icon-128x128.png">
+          <h2>Sepertinya anda sedang tidak terhubung ke internet</h2>
+        </div>
+      </div>
+      `;
     }
 
     detailContainer.innerHTML += createRestaurantDetailTemplate(restaurant.restaurant);

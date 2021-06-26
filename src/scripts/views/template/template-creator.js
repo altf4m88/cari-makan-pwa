@@ -1,5 +1,3 @@
-import CONFIG from '../../global/config';
-
 const createRestaurantDetailTemplate = (restaurant) => `
     <div class="restaurant-info" id="restaurant-info">
         <div class="restaurant-detail-image-container"><img class="restaurant-detail-image" src="https://restaurant-api.dicoding.dev/images/medium/${restaurant.pictureId}" alt=""></div>
