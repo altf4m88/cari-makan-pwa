@@ -11,7 +11,7 @@ const LikeButtonInitiator = {
   },
 
   async renderButton() {
-    const { id } = this._movie;
+    const { id } = this._restaurant;
 
     if (await this.isRestaurantExist(id)) {
       this.renderLiked();
@@ -20,7 +20,7 @@ const LikeButtonInitiator = {
     }
   },
 
-  async isMovieExist(id) {
+  async isRestaurantExist(id) {
     const movie = await FavoriteRestaurantIdb.getRestaurant(id);
     return !!movie;
   },
@@ -30,7 +30,7 @@ const LikeButtonInitiator = {
 
     const likeButton = document.querySelector('#likeButton');
     likeButton.addEventListener('click', async () => {
-      await FavoriteRestaurantIdb.putRestaurant(this._movie);
+      await FavoriteRestaurantIdb.putRestaurant(this._restaurant);
       this.renderButton();
     });
   },
@@ -40,7 +40,7 @@ const LikeButtonInitiator = {
 
     const likeButton = document.querySelector('#likeButton');
     likeButton.addEventListener('click', async () => {
-      await FavoriteRestaurantIdb.deleteMovie(this._movie.id);
+      await FavoriteRestaurantIdb.deleteRestaurant(this._restaurant.id);
       this.renderButton();
     });
   },
