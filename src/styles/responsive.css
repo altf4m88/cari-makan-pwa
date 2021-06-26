@@ -1,0 +1,109 @@
+@media screen and (max-width:1000px){
+    .container{
+        margin: 3em 5em;
+    }
+
+    .card-title{
+        text-align: center;
+        font-size: 20px;
+        font-weight: 600;
+    }
+}
+
+@media screen and (max-width:850px){
+    .container{
+        margin: 3em 8em;
+    }
+
+    .card-container{
+        grid-template-columns: 1fr;
+    }
+    .restaurant-info{
+        flex-direction: column;
+    }
+    .restaurant-detail-image-container{
+        width: 100%;
+        justify-content: center;
+    }
+
+    .restaurant-profile{
+        width: 100%;
+        margin:0px;
+    }
+
+    .restaurant-menus{
+        margin: 25px 50px 50px 50px;
+        display: flex;
+    }
+
+    .reviews{
+        margin: 25px 50px 50px 50px;
+    }
+}
+
+
+@media screen and (max-width: 632px) {
+    .nav{
+        justify-content: space-between;
+    }
+
+    .on-click {
+        -webkit-transform: translate(0px, 50px) !important;
+        transform: translate(0px, 50px) !important;
+    }
+
+    .nav-list{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        z-index: 10;
+        background-color: #7371FC;
+        width: 100%;
+        position: absolute;
+
+        -webkit-transform: translate(-800px, 50px);
+        transform: translate(-800px, 50px);
+        transition: transform 0.8s ease;
+    }
+
+    .nav-item {
+        box-sizing: border-box;
+        display: inline-block;
+        text-align: center;
+        line-height: 24px;
+        text-transform: uppercase;
+    }
+
+    .nav-title{
+        margin-left: 5%;
+    }
+
+    .line{
+        width: 36px;
+        height: 5px;
+        background-color: white;
+        margin: 8px;
+    }
+
+    .hamburger{
+        display: inline;
+        background-color: #7371FC;
+        justify-self: flex-end;
+        cursor: pointer;
+        z-index: 10;
+        margin-right: 5%;
+        border: 0;
+    }
+}
+
+@media screen and (max-width: 455px) {
+    .hero-title{
+        font-size: 24px;
+    }
+
+    .hero-tagline {
+        margin: 16px 10px 0 10px;
+        font-size: 16px;
+        font-weight: 500;
+    }
+}
