@@ -1,14 +1,16 @@
 import UrlParser from '../../routes/url-parser';
 import RestaurantSource from '../../data/restaurant-source';
-import { createRestaurantDetailTemplate, createRestaurantReviewTemplate, createRestaurantMenuTemplate } from '../template/template-creator';
+import {
+  createRestaurantDetailTemplate, createRestaurantReviewTemplate, createRestaurantMenuTemplate, createLikeButtonTemplate, createLikedButtonTemplate,
+} from '../template/template-creator';
 
 const Detail = {
   async render() {
     return `
-        <h1 class="detail-page-title" >Detail Page</h1>
+        <h1 class="detail-page-title" tabindex="0">Detail Page</h1>
 
         <div id="restaurant"></div>
-        
+        <div id="likeButtonContainer"></div>
       `;
   },
 
@@ -42,6 +44,9 @@ const Detail = {
     restaurant.restaurant.categories.forEach((category) => {
       categories.innerHTML += `${category.name}, `;
     });
+
+    const likeButtonContainer = document.querySelector('#likeButtonContainer');
+    likeButtonContainer.innerHTML = createLikeButtonTemplate();
   },
 };
 

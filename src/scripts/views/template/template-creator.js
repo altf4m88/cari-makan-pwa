@@ -1,9 +1,9 @@
 import CONFIG from '../../global/config';
 
 const createRestaurantDetailTemplate = (restaurant) => `
-    <div class="restaurant-info">
+    <div class="restaurant-info" id="restaurant-info">
         <div class="restaurant-detail-image-container"><img class="restaurant-detail-image" src="https://restaurant-api.dicoding.dev/images/medium/${restaurant.pictureId}" alt=""></div>
-        <div class="restaurant-profile">
+        <div class="restaurant-profile" tabindex="0">
             <p class="restaurant-info-text">Nama: ${restaurant.name}</p>
             <p class="restaurant-info-text">Rating: <i class="fas fa-star"></i> ${restaurant.rating}</p>
             <p class="restaurant-info-text">Kota: ${restaurant.city}</p>
@@ -13,7 +13,7 @@ const createRestaurantDetailTemplate = (restaurant) => `
         </div>
     </div>
 
-    <div class="restaurant-menus">
+    <div tabindex="0" class="restaurant-menus" id="restaurant-menus">
     <div class="foods-menu">
         <h2>Foods</h2>
         <ul id="foods" class="menu-list">
@@ -28,7 +28,7 @@ const createRestaurantDetailTemplate = (restaurant) => `
     </div>
     </div>
     <div class="reviews">
-        <h2>Review Pelanggan</h2>
+        <h1 tabindex="0">Review Pelanggan</h1>
         <div class="review-cards">
             
         </div>
@@ -36,7 +36,7 @@ const createRestaurantDetailTemplate = (restaurant) => `
     `;
 
 const createRestaurantReviewTemplate = (review) => `
-    <div class="review-card">
+    <div tabindex="0" class="review-card">
         <p><b>Nama:</b> ${review.name}</p>
         <p>${review.review}</p>
         <p>Pada tanggal: ${review.date}</p>
@@ -64,6 +64,23 @@ const createRestaurantItemTemplate = (restaurant) => `
     </article>
 `;
 
+const createLikeButtonTemplate = () => `
+  <button aria-label="like this movie" id="likeButton" class="like">
+     <i class="fa fa-heart-o" aria-hidden="true"></i>
+  </button>
+`;
+
+const createLikedButtonTemplate = () => `
+  <button aria-label="unlike this movie" id="likeButton" class="like">
+    <i class="fa fa-heart" aria-hidden="true"></i>
+  </button>
+`;
+
 export {
-  createRestaurantDetailTemplate, createRestaurantItemTemplate, createRestaurantReviewTemplate, createRestaurantMenuTemplate,
+  createRestaurantDetailTemplate,
+  createRestaurantItemTemplate,
+  createRestaurantReviewTemplate,
+  createRestaurantMenuTemplate,
+  createLikeButtonTemplate,
+  createLikedButtonTemplate,
 };
