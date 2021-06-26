@@ -97,6 +97,12 @@
 }
 
 @media screen and (max-width: 455px) {
+    .container{
+        display: flex;
+        flex-direction: column;
+        margin: 3em 3em;
+    }
+
     .hero-title{
         font-size: 24px;
     }
