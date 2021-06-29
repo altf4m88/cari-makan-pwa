@@ -1,4 +1,3 @@
-/* eslint-disable no-underscore-dangle */
 import FavoriteRestaurantIdb from '../data/favorite-restaurant-idb';
 import { createLikeButtonTemplate, createLikedButtonTemplate } from '../views/template/template-creator';
 
