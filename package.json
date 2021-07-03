@@ -4,11 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start-dev": "webpack-dev-server --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
     "lint": "eslint ./",
-    "lint-fix": "eslint ./ --fix"
+    "lint-fix": "eslint ./ --fix",
+    "test": "karma start"
   },
   "keywords": [],
   "author": "",
