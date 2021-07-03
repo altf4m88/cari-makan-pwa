@@ -84,10 +84,16 @@ body {
     min-height: 380px;
     width: 100%;
     text-align: center;
-    background:-webkit-linear-gradient(rgba(29, 38, 113, 0.6), rgba(0, 0, 0, 0.4)), url("../public/images/heros/hero-image_2.jpg");
-    background:linear-gradient(rgba(29, 38, 113, 0.6), rgba(0, 0, 0, 0.4)), url("../public/images/heros/hero-image_2.jpg");
+    background:-webkit-linear-gradient(rgba(29, 38, 113, 0.6), rgba(0, 0, 0, 0.4)), url("../public/images/heros/hero-image_2-large.jpg");
+    background:linear-gradient(rgba(29, 38, 113, 0.6), rgba(0, 0, 0, 0.4)), url("../public/images/heros/hero-image_2-large.jpg");
     background-position: center;
-    ;
+}
+
+@media screen and (max-width: 455px) {
+    .hero{
+        background:-webkit-linear-gradient(rgba(29, 38, 113, 0.6), rgba(0, 0, 0, 0.4)), url("../public/images/heros/hero-image_2-small.jpg");
+        background:linear-gradient(rgba(29, 38, 113, 0.6), rgba(0, 0, 0, 0.4)), url("../public/images/heros/hero-image_2-small.jpg");    
+    }
 }
 
 .hero-inner {

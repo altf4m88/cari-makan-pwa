@@ -56,5 +56,4 @@ Scenario('unliking one restaurant', async ({ I }) => {
 
   I.amOnPage('/#/favourite');
   I.see('Belum ada restoran yang disukai', '.no-favorite');
-
 });
