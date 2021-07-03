@@ -13,7 +13,7 @@ const FavoriteRestaurantIdb = {
   async getRestaurant(id) {
     return (await dbPromise).get(OBJECT_STORE_NAME, id);
   },
-  async getAllRestaurants() {
+  async getAllRestaurant() {
     return (await dbPromise).getAll(OBJECT_STORE_NAME);
   },
   async putRestaurant(restaurant) {
