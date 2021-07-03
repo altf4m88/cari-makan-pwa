@@ -324,3 +324,8 @@ footer{
     align-items: center;
     margin-bottom: 40vh;
 }
+
+.no-favorite{
+    text-align: center;
+    margin: 50px auto;
+}

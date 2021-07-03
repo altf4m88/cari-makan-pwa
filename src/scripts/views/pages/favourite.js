@@ -23,7 +23,7 @@ const Favourite = {
     const restaurantsContainer = document.querySelector('#favorite-restaurants');
     const emptyContainer = document.querySelector('.empty-page');
     console.log(restaurants);
-    if(restaurants.length < 1) {
+    if (restaurants.length < 1) {
       emptyContainer.innerHTML += "<h3 class='no-favorite'>Belum ada restoran yang disukai</h3>";
     }
 
