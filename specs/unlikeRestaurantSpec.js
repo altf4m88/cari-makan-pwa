@@ -46,9 +46,9 @@ describe('Unliking A Restaurant', () => {
         id: 1,
       },
     });
-   
+
     document.querySelector('[aria-label="unlike this restaurant"]').dispatchEvent(new Event('click'));
-   
+
     expect(await FavoriteRestaurantIdb.getAllRestaurant()).toEqual([]);
   });
 
@@ -59,11 +59,11 @@ describe('Unliking A Restaurant', () => {
         id: 1,
       },
     });
-   
+
     await FavoriteRestaurantIdb.deleteRestaurant(1);
-   
+
     document.querySelector('[aria-label="unlike this restaurant"]').dispatchEvent(new Event('click'));
-   
+
     expect(await FavoriteRestaurantIdb.getAllRestaurant()).toEqual([]);
   });
 });
