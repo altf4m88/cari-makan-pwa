@@ -58,13 +58,13 @@ describe('Liking A Restaurant', () => {
         id: 1,
       },
     });
-   
+
     await FavoriteRestaurantIdb.putRestaurant({ id: 1 });
 
     document.querySelector('#likeButton').dispatchEvent(new Event('click'));
 
     expect(await FavoriteRestaurantIdb.getAllRestaurant()).toEqual([{ id: 1 }]);
- 
+
     FavoriteRestaurantIdb.deleteRestaurant(1);
   });
 
@@ -73,9 +73,9 @@ describe('Liking A Restaurant', () => {
       likeButtonContainer: document.querySelector('#likeButtonContainer'),
       restaurant: {},
     });
-   
+
     document.querySelector('#likeButton').dispatchEvent(new Event('click'));
-   
+
     expect(await FavoriteRestaurantIdb.getAllRestaurant()).toEqual([]);
   });
 });
