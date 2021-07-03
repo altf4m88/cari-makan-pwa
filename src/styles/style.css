@@ -168,6 +168,7 @@ body {
 
 .card-image{
     width: 100%;
+    object-fit: cover;
     height: 300px;
 }
 
@@ -187,6 +188,7 @@ body {
 }
 
 .card-title{
+    text-decoration: none;
     color: black;
     text-align: center;
     font-size: 30px;
@@ -258,6 +260,7 @@ footer{
 
 .restaurant-detail-image{
     width: 100%;
+    object-fit: cover;
     border-radius: 25px;
 }
 
