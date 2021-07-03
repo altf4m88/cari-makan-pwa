@@ -47,7 +47,7 @@ const createRestaurantMenuTemplate = (menu) => `
 
 const createRestaurantItemTemplate = (restaurant) => `
     <article tabindex="0" class="card" id=${restaurant.id}>
-        <img class="card-image" src=https://restaurant-api.dicoding.dev/images/small/${restaurant.pictureId} alt="Foto ${restaurant.name}">
+        <img class="card-image lazyload" data-src=https://restaurant-api.dicoding.dev/images/small/${restaurant.pictureId} alt="Foto ${restaurant.name}">
         <div class="card-content">
             <div class="card-header">
                 <a href="#/detail/${restaurant.id}" class="card-title">${restaurant.name}, ${restaurant.city}</a>
